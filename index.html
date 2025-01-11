@@ -1,21 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirecting...</title>
-  <script>
-    window.onload = function() {
-      // Get the URL query parameter
-      const params = new URLSearchParams(window.location.search);
-      const n = parseInt(params.get("n")) || 3; // Default to 3 seconds if 'n' is not provided
-
-      //setTimeout(function() {
-        window.location.href = "http://flagserver:8081/flag";
-      //}, n * 1000); // Convert seconds to milliseconds
-    };
-  </script>
-</head>
-<body>
-</body>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0;url=http://flagserver:8081/flag" />
+    <title></title>
+  </head>
+ <body></body>
 </html>
