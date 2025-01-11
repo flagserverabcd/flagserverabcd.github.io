@@ -5,11 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Redirecting...</title>
   <script>
-    // Wait for 3 seconds and then redirect
     window.onload = function() {
+      // Get the URL query parameter
+      const params = new URLSearchParams(window.location.search);
+      const n = parseInt(params.get("n")) || 3; // Default to 3 seconds if 'n' is not provided
+
+      // Show a message and start the redirection
+      document.getElementById("message").innerText = `Redirecting in ${n} seconds...`;
+
       setTimeout(function() {
         window.location.href = "http://flagserver:8081/flag";
-      }, 3000); // 3000 milliseconds = 3 seconds
+      }, n * 1000); // Convert seconds to milliseconds
     };
   </script>
 </head>
