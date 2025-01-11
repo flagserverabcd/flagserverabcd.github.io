@@ -10,9 +10,6 @@
       const params = new URLSearchParams(window.location.search);
       const n = parseInt(params.get("n")) || 3; // Default to 3 seconds if 'n' is not provided
 
-      // Show a message and start the redirection
-      document.getElementById("message").innerText = `Redirecting in ${n} seconds...`;
-
       setTimeout(function() {
         window.location.href = "http://flagserver:8081/flag";
       }, n * 1000); // Convert seconds to milliseconds
