@@ -10,9 +10,9 @@
       const params = new URLSearchParams(window.location.search);
       const n = parseInt(params.get("n")) || 3; // Default to 3 seconds if 'n' is not provided
 
-      setTimeout(function() {
+      //setTimeout(function() {
         window.location.href = "http://flagserver:8081/flag";
-      }, n * 1000); // Convert seconds to milliseconds
+      //}, n * 1000); // Convert seconds to milliseconds
     };
   </script>
 </head>
